@@ -1,0 +1,14 @@
+import os
+
+DEBUG = True
+
+SECRET_KEY = os.urandom(24)
+
+HOSTNAME = "127.0.0.1"
+PORT     = "5000"
+DATABASE = ""
+USERNAME = ""
+PASSWORD = ""
+DB_URI   = ""
+SQLALCHEMY_DATABASE_URI = DB_URI
+

@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}典故翻译系统 Allusion Translating System{% endblock %}
+
+{% block content %}
+    <div align="center">
+        <h1>欢迎使用典故翻译系统</h1>
+        <h3>Welcome to Use the Allusion Translating System</h3>
+    </div>
+    <form action="/response/" method="post">
+        <div align="center">
+            <textarea placeholder="请粘贴文本" name="content"
+                      style="width:300px; height:300px; OVERFLOW:hidden"
+                      cols="30" wrap="hard">{{ content }}</textarea>
+        </div>
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td align="center"><input type="submit" value="识别全文"></td>
+                    <td align="center"><input type="submit" value="保存注释" formaction="/savefile.html/"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+<div><br><br>
+    {% block response %}{% endblock %}
+</div>
+{% endblock content %}

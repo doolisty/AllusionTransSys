@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block response %}
+    {% for item in result %}
+        <div style="text-align:center">
+        <table style="width:60%; margin:auto">
+            <tbody>
+                {% for key, value in item.items() %}
+                    <tr>{{ key }}：{{ value }}</tr><br/>
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    {% endfor %}
+{% endblock %}
